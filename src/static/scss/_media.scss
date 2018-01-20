@@ -1,65 +1,214 @@
 @import "vars";
+@import "media-queries";
 
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px){
-	/**/
+@include mq($max-width: 1024px){
+	body{
+		.left_sidebar{
+			width: 9%;
+			// background: $darkGrey;
+		}
+		.screen_wrap{
+			.left_section{
+				grid-column: 1/2;
+				
+			}
+			.middle_section{
+				grid-column: 2/13;
+				.screen_name_wrap{
+					left: 12%;
+				}
+				.youtube_link_wrap{
+					left: 12%;
+				}
+				.content_block{
+					position: relative;
+				}
+			}
+			.right_section{
+				display: none;
+			}
+			.hamburger_wrap{
+				div{
+					background-color: $white;
+				}
+			}
+		}
+		.screen_wrap.main_screen{
+
+		}
+		.screen_wrap.training_with_me{
+			.left_section{
+				
+			}
+			.middle_section{
+				// display: flex;
+				// flex-direction: column;
+				.screen_name_wrap{
+					// top: 20%;
+					// left: 40%;
+					// transform: translateX(-50%);
+					position: relative;
+					left: 0;
+					top: 0;
+					transform: none;
+					margin-left: 5%;
+					margin-top: 20vh;
+					margin-bottom: 10vh;
+				}
+				.content_block{
+					// top: 35%;
+					// left: 40%;
+					// right: 0;
+					// transform: translateX(-50%);
+					width: 80%;
+					position: relative;
+					top: 0;
+					left: 0;
+					right: 0;
+					transform: none;
+					margin-left: 5%;
+				}
+			}
+		}
+	}
+}
+@include mq($max-width: 767px){
+	html{font-size: 10px}
+	body{
+		.left_sidebar{
+			.instagram_wrap{}
+			.pagin_wrap{
+				.current_page_wrap, .stripe, .amount_page{
+					display: none;
+				}
+				.points_wrap{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					.point{
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						// background-color: pink;
+						margin-top: 5px;
+						margin-bottom: 5px;
+						background-color: #534E4E;
+						&.active{
+							background-color: #C2BEBE;
+						}
+					}
+				}
+			}
+			.next_chapter_wrap{
+				.rotate_text{
+					font-size: 1rem;
+				}
+			}
+			
+		}
+		.screen_wrap{
+			background-image: none;
+			background-color: $darkGrey;
+			background-repeat: no-repeat;
+			background-size: cover;
+			.left_section{
+				background-color: transparent;
+			}
+			.middle_section{
+				background-image: none;
+			}
+		}
+		.screen_wrap.main_screen{
+			background-image: url(../images/main_photo.jpg);
+		}
+		.screen_wrap.training_with_me{
+			// background-image: url(../images/second_photo.jpg);
+			.middle_section{
+				background-image: url(../images/main_photo_02_768.jpg);
+				.content_block{
+					div{
+						p{
+							color: $white;
+						}
+					}
+					.about_me{
+						border-bottom: 3px solid $white;
+						a{
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@include mq($max-width: 480px){
+	html{
+		body{
+			.screen_wrap{}
+			.screen_wrap.training_with_me{
+				.middle_section{
+					background-image: none;
+					background-color: $darkGrey;
+				}
+			}
+		}
+	}
+}
+@include max-screen-height($max: 440px){
+	body{
+		.left_sidebar{
+			// background-color: red;
+			.instagram_wrap{
+				.rotate_text{
+					margin-top: 25px;
+					font-size: 1rem;
+				}
+				.wrap_logo{
+					margin-top: 25px;
+				}
+			}
+			.pagin_wrap{
+				.points_wrap{
+					.point{
+						width: 7px;
+						height: 7px;
+						margin-top: 3px;
+						margin-bottom: 3px;
+					}
+				}
+			}
+			.next_chapter_wrap{
+				.rotate_text{
+					font-size: 0.7rem;
+					margin-top: 15px;
+				}
+				#stripe{
+					height: 40px;
+					width: 5px;
+				}
+
+			}
+		}
+	}
 }
 
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px){
-	/**/
-}
 
+// 1366*632 - коэф. 2.15
+// 1200*560
+// 1024*475
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px){
-	/**/
-}
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px){
-	/**/
-}
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px){
-	/**/
-}
-
-
-/*==========  Mobile First  ==========*/
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px){
-	/**/
-}
-
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px){
-	/**/
-}
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px){
-	/**/
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px){
-	/**/
-}
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px){
-	/**/
-}
-
+// @include iphone6-plus{
+// 	@include portrait{
+// 		background-color: orange;
+// 	}
+// 	@include landscape{
+// 		background-color: green;
+// 	}
+// }
+// есть

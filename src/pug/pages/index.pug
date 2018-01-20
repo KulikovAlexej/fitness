@@ -8,17 +8,75 @@ html(lang='ru=RU')
 		//- link(rel='icon', href='img/favicon/favicon.png', type='image/x-icon')
 		link(rel='stylesheet', href='static/css/main.css')
 	body
+		.modal_youtube
 		aside.left_sidebar
 			.instagram_wrap
+				.rotate_text
+					a(href='#') ritochkkka
+				.wrap_logo
+					img(src='static/images/icons/inst_ico.png')
 			.pagin_wrap
+				.current_page_wrap
+					p 01
+				.stripe
+				.amount_page
+					p 07
+				.points_wrap
+					.point.active
+					.point
+					.point
+					.point
+					.point
 			.next_chapter_wrap
-		section.screen_wrap
+				.rotate_text СЛЕДУЮЩИЙ
+				#stripe
+		section.screen_wrap.main_screen
 			.left_section
+			.middle_section
 				.screen_name_wrap
 					h1 ПЕРСОНАЛЬНЫЙ
 					h1 ТРЕНЕР
 				.youtube_link_wrap
 					a(href='#') смотри тренировку
+					.icon_wrap
+						img(src='static/images/icons/play_button.svg')
+			.right_section
+				.photo_wrap
+					img(src='static/images/second_photo.jpg' alt='fitness')
+			.hamburger_wrap
+				.stripe
+				.stripe
+				.stripe
+		section.screen_wrap.training_with_me
+			.left_section
 			.middle_section
+				.screen_name_wrap
+					h1 тренировки
+					h1 со мной
+				.content_block
+					div
+						p 01
+						p Тренируйся <span>дома</span> и в <span>зале</span>.
+						<span></span>
+					div
+						p 02
+						p Мотивация <span>24/7</span>.
+					div
+						p 04
+						p <span>Индивидуальный рацион</span> питания с учетом твоих пожеланий.
+					div
+						p 04
+						p Ты будешь питаться <span>разнообразно</span>, а заниматься <span>с удовольствием</span>.
+					.about_me
+						a(href='#') Узнай про меня
+			.right_section
+		section.screen_wrap.your_way
+			.left_section
+			.middle_section
+				.screen_name_wrap
+					h1 твой путь
+					h1 к новому телу
+				.content_block
+			.right_section
 		script(src='static/js/libs.min.js')
 		script(src='static/js/main.js')
