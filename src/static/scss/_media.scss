@@ -19,6 +19,10 @@
 				grid-column: 2/13;
 				.screen_name_wrap{
 					left: 12%;
+					flex-direction: column;
+					.content{
+						position: relative;
+					}
 				}
 				.youtube_link_wrap{
 					left: 12%;
