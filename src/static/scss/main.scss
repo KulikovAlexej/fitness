@@ -13,6 +13,26 @@ html { font-size: 18px; }
   	visibility: hidden;
 }
 
+.trim{
+	overflow: hidden;
+}
+
+.hidden_up{
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.hidden_down{
+	transform: translateY(100%);
+	opacity: 0;
+	transition: all .5s linear;
+}
+
+.visibleY{
+	transform: translateY(0%);
+	opacity: 1;
+	transition: all .5s linear;
+}
 h1,h2,h3,h6,p,body{
 	margin: 0;
 	padding: 0;
@@ -292,29 +312,28 @@ body{
 						width: 100%;
 						overflow: hidden;
 						display: flex;
+						position: relative;
 						// flex-direction: row;
 						.slide{
 							min-width: 80%;
-							// background-color: orange;
-							// height: 300px;
-							// margin-left: 1px;
-							// border: 1px solid black;
-							.header_part{
+							width: 80%;
 								h6{
 									text-transform: uppercase;
 									color: $white;
-									background-color: green;
+									// background-color: green;
+									border: solid black 1px;
 								}
-								#anim{}
-								.hidden{
-									transform: translateX(-100%);
-									transition: all .5s linear;
-								}
+								// #anim{}
+								// .hidden{
+								// 	transform: translateX(-100%);
+								// 	transition: all .5s linear;
+								// }
 								.step_wrap{
 									display: flex;
 									flex-direction: row;
 									align-items: center;
-									background-color: pink;
+									// background-color: pink;
+									border: solid black 1px;
 									// border: solid black;
 									p{
 										text-transform: uppercase;
@@ -329,16 +348,24 @@ body{
 										height: 5px;
 										width: 80%;
 									}
+									.stripe.hidden{
+										width: 0;
+										transition: all .5s linear;
+									}
 								}
-							}
-							.body_part{
-								margin-top: 20px;
-								width: 90%;
-								background-color: red;
-								p{
-									font-size: 1rem;
+							
+								.body_part{
+									margin-top: 20px;
+									width: 100%;
+									// background-color: red;
+									border: solid black 1px;
+									// overflow: hidden;
+									// transform: translateX(50px);
+									p{
+										font-size: 1rem;
+										padding-right: 80px;
+									}
 								}
-							}
 						}
 					}
 				}
