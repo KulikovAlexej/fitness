@@ -22,11 +22,11 @@ html { font-size: 18px; }
 	opacity: 0;
 }
 
-.hidden_down{
-	transform: translateY(100%);
-	opacity: 0;
-	transition: all .5s linear;
-}
+// .hidden_down{
+// 	transform: translateY(100%);
+// 	opacity: 0;
+// 	transition: all .5s linear;
+// }
 
 .visibleY{
 	transform: translateY(0%);
@@ -41,6 +41,9 @@ h1,h2,h3,h6,p,body{
 body{
 	font-family: 'Open Sans';
 	font-weight: 700;
+	height: 100vh;
+	overflow: hidden;
+	background-color: $darkGrey;
 	.modal_youtube{
 		height: 100vh;
 		width: 100%;
@@ -255,9 +258,24 @@ body{
 		}
 	}
 	.screen_wrap.main_screen{
-
+		&.active{
+			transform: translateY(0%);
+			transition: .4s all ease-in-out;
+		}
+		&.hidden{
+			transform: translateY(-100%);
+			transition: .4s all ease-in-out;
+		}
 	}
 	.screen_wrap.training_with_me{
+		&.active{
+			transform: translateY(-100%);
+			transition: .4s all ease-in-out;
+		}
+		&.hidden{
+			transform: translateY(-200%);
+			transition: .4s all ease-in-out;
+		}
 		.left_section{}
 		.middle_section{
 			background-image: url(../images/main_foto_food_02_1280px.jpg);
@@ -298,6 +316,14 @@ body{
 		.right_section{}
 	}
 	.screen_wrap.your_way{
+		&.active{
+			transform: translateY(-200%);
+			transition: .4s all ease-in-out;
+		}
+		&.hidden{
+			transform: translateY(-300%);
+			transition: .4s all ease-in-out;
+		}
 		overflow: hidden;
 		.middle_section{
 			background-image: url(../images/main_foto_03_1280px.jpg);
