@@ -26,12 +26,12 @@ let makeActive = (i) => {
 		steps[0].nextSibling.nextSibling.classList.add('hidden');
 	}
 	
-	console.log(steps[i].nextSibling.nextSibling);
+	// console.log(steps[i].nextSibling.nextSibling);
 	headers[i].classList.add('visibleY');
 	articles[i].classList.add('visibleY');
 	prevSlide = currentSlide;
 	currentSlide = i;
-	console.log('im working');
+	// console.log('im working');
 	steps[i].removeEventListener('click', makeActive)
 	//removing do not work
 }
@@ -44,23 +44,38 @@ makeActive(0);
 // 	})
 // });
 container.addEventListener('click', (e) => {
-	console.log(event.target)
+	// console.log(event.target)
 })
 
 
-
+let someFunc = () => 5;
 let body = document.querySelector('body');
+
 body.addEventListener('wheel', (e) => {
-	let section = document.querySelectorAll('section');
 	let toggleSect = (sectionIndex) => {
 		let target = e.target;
-		let slide = document.querySelector('.slider_wrap slide');
-		section[sectionIndex-1].classList.remove('active');
-		section[sectionIndex-1].classList.add('hidden');
-		section[sectionIndex].classList.add('active');
-		console.log(e.path);
-		// console.log(e.timeStamp);
+		let screens = document.querySelectorAll('.screen_wrap');
+		console.log(screens.length);
+		while(target != body){
+			if(target.classList.contains('screen_wrap')){
+				someFunc(target);
+				console.log(target);
+				return
+			}
+			target = target.parentNode;
+		}
+		screens.forEach((screen, i) => {
+			if(screen[i] != target){
+				console.log('подошло')
+			}
+		})
+
+		// section[sectionIndex-1].classList.remove('active');
+		// section[sectionIndex-1].classList.add('hidden');
+		// section[sectionIndex].classList.add('active');
+		// console.log(target.className);
 	}
 	toggleSect(1);
 })
+
 
