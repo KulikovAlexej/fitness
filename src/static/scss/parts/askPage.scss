@@ -1,0 +1,91 @@
+@import "../vars";
+@import "../libs";
+
+body{
+	.screen_wrap.ask_page{
+		.middle_section{
+			background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/05_main_page.jpg);
+			background-position-y: center;
+			background-position-x: center;
+			.screen_name_wrap{
+				.content{
+					width: 35%;
+					.link_wrap{
+						margin-top: 35px;
+					}
+					.tabs_wrap{
+						.container_tab{
+							border-bottom: 2px solid $darkGrey;
+							// background-color: grey;
+							font-size: 1rem;
+							&:first-child{
+								border-top: 2px solid $darkGrey;
+							}
+							.question_wrap{
+								// background-color: blue;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								color: $darkGrey;
+								padding-top: 20px;
+								padding-bottom: 20px;
+								cursor: pointer;
+								p{
+									font-size: 15px;
+									font-weight: 800;
+								}
+								.toggle_btn{
+									$size: 11px;
+									height: $size;
+									width: $size;
+									// background-color: pink;
+									position: relative;
+									.first_stripe{
+										height: $size/5;
+										width: $size;
+										background-color: $darkGrey;
+										position: absolute;
+										left: 50%;
+										top: 50%;
+										transform: translate(-50%, -50%)
+									}
+									.second_stripe{
+										height: $size/5;
+										width: $size;
+										background-color: $darkGrey;
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-50%, -50%) rotate(90deg);
+										transition: transform 1s;
+										&.active{
+											transform: translate(-50%, -50%) rotate(0deg)
+										}
+									}
+								}
+							}
+							.answer_wrap{
+								// background-color: yellow;
+								max-height: 0;
+								overflow: hidden;
+								transition: max-height .2s linear;
+								// padding-bottom: 20px;
+								&.active{
+									// display: block;
+								}
+								p{
+									font-size: 12px;
+									font-weight: 600;
+									box-sizing: border-box;
+									border-bottom: 15px transparent solid;
+
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

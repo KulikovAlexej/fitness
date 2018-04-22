@@ -1,0 +1,171 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+//from 768 to 1024
+@include mq($max-width: 1024px){
+	html{
+		body{
+			.modal_window{
+				&.active{
+					.wrapper{
+						.left_side{
+
+						}
+						.middle_side{
+							grid-column: 2/13;
+							background-size: cover;
+							padding-top: 250px;
+						}
+						.right_side{
+							display: none;
+						}
+					}
+				}
+			}
+			.hamburger_wrap{
+				
+				div{
+					background-color: $white;
+				}
+			}
+			.left_sidebar{
+				width: 9%;
+				.instagram_wrap{
+
+				}
+				.pagin_wrap{
+
+				}
+				.next_chapter_wrap{
+
+				}
+			}
+			.screen_wrap{
+				.left_section{
+					grid-column: 1/2;
+				}
+				.middle_section{
+					grid-column: 2/13;
+					.screen_name_wrap{
+						left: 12%;
+						flex-direction: column;
+						position: relative;
+						position: relative;
+						left: 0;
+						top: 0;
+						width: 85%;
+						transform: none;
+						margin-left: 5%;
+						margin-top: 15vh;
+						// margin-bottom: 10vh;
+						div{
+							h1{
+								font-size: 70px;
+								line-height: 80px;
+							}
+						}
+						.content{
+							position: relative;
+							width: 90%;
+							margin-top: 8vh;
+						}
+					}
+
+					.link_wrap{
+						left: 12%;
+						top: 30px;
+						a{
+							border-bottom: $white solid 2px;
+						}
+					}
+				}
+				.right_section{
+					display: none;
+				}
+				&.main_screen{
+					.middle_section{
+						.screen_name_wrap{
+							position: absolute;
+							margin: 0;
+							left: 12%;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+						.youtube_link_wrap{
+							left: 12%;
+							a{
+								font-size: 13px;
+							}
+						}
+					}
+				}
+				&.training_with_me{
+					.middle_section{
+						background-position-x: 20%;
+						.screen_name_wrap{
+							position: relative;
+							.content{
+								width: 65%;
+								// margin-top: 80px;
+							}
+						}
+					}
+				}
+				&.your_way{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								// margin-top: 85px;
+								width: 70%;
+								right: 0;
+							}
+						}
+					}
+				}
+				&.my_wards{
+					.middle_section{
+						
+						.screen_name_wrap{
+							// margin-top: 10vh;
+							.content{
+								position: relative;
+								top: 30px;
+								transform: translateX(17%);
+								.pagin_wrap{
+									margin-bottom: 30px;
+								}
+							}
+						}
+					}
+				}
+				&.ask_page{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								width: 90%;
+							}
+						}
+						.link_wrap{
+							margin-top: 30px;
+						}
+					}
+				}
+				&.contacts_block{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								// margin-top: 60px;
+								width: 90%;
+								right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

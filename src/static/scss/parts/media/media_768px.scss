@@ -1,0 +1,90 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+//from 480 to 768
+
+@include mq($max-width: 767px){
+	html{
+		body{
+			.modal_window{
+				&.youtube{
+
+				}
+				&.menu{
+
+				}
+			}
+			.left_sidebar{
+				width: 13%;
+			}
+			.screen_wrap{
+				.left_section{
+					grid-column: 1/1;
+					display: none;
+				}
+				.middle_section{
+					grid-column: 1/13;
+					.screen_name_wrap{
+						margin-left: 15%;
+						width: 80%;
+						div{
+							h1{
+								font-size: 45px;
+								line-height: 80px;
+							}
+						}
+						.content{
+							
+						}
+					}
+
+					.link_wrap{
+						
+						a{
+							border-bottom: $white solid 2px;
+						}
+					}
+				}
+				.right_section{
+					display: none;
+				}
+				&.main_screen{
+
+				}
+				&.training_with_me{
+
+				}
+				&.your_way{
+					
+				}
+				&.my_wards{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								width: 300px;
+								#wards_onright{
+									left: 300px;
+								}
+								.slider_wrap{
+									width: 100%;
+									.slide{
+
+									}
+								}
+								
+							}
+							
+						}
+					}
+				}
+				&.ask_page{
+					
+				}
+				&.contacts_block{
+					
+				}
+			}
+		}
+	}
+}

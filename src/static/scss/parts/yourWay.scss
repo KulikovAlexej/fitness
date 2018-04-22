@@ -1,0 +1,70 @@
+@import "../vars";
+@import "../libs";
+
+body{
+	.screen_wrap.your_way{
+		overflow: hidden;
+		.middle_section{
+			background-image: linear-gradient(rgba(42, 48, 62, .04)) , url(../images/03_main_page.jpg);
+			background-position-y: center;
+			.screen_name_wrap{
+				.content{
+					width: 40%;
+					right: -5%;
+					top: 0;
+					.tab_wrap{
+						display: flex;
+						justify-content: space-between;
+						margin-bottom: 15px;
+						.step_wrap{
+							p{
+								color: $white;
+								border-bottom: 3px solid $pink;
+								font-size: 23px;
+								line-height: 32px;
+								text-transform: uppercase;
+								&:hover{
+									color: $pink;
+									cursor: pointer;
+								}
+								&.active{
+									color: $pink;
+								}
+							}
+						}
+					}
+					.slider_wrap{
+						width: 100%;
+						overflow: hidden;
+						display: flex;
+						position: relative;
+						.slide{
+							transition: all .4s;
+							min-width: 100%;
+							width: 100%;
+								h6{
+									text-transform: uppercase;
+									color: $white;
+									font-size: 15px;
+									font-weight: 900;
+									margin-bottom: 6px;
+									font-weight: 800;
+									line-height: 23px;
+								}
+								.body_part{
+									margin-top: 5px;
+									width: 100%;
+									p{
+										font-size: 15px;
+										line-height: 23px;
+										color: $white;
+										
+									}
+								}
+						}
+					}
+				}
+			}
+		}
+	}
+}

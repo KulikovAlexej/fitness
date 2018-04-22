@@ -1,0 +1,16 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+
+
+@include iphone4{
+	@include portrait{
+		html{
+			body{
+				.hamburger_wrap{
+					background: green;
+				}
+			}
+		}
+	}
+}

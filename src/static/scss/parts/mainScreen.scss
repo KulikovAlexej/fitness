@@ -1,0 +1,38 @@
+@import "../vars";
+@import "../libs";
+
+html{
+	body{
+		.main_screen{
+			.middle_section{
+				.youtube_link_wrap{
+					top: 65%;
+					position: absolute;
+					left: 9%;
+					z-index: 200;
+					display: flex;
+					align-items: center;
+					a{
+						text-transform: uppercase;
+						color: $pink;
+						font-size: 11px;
+						text-decoration: none;
+					}
+					.icon_wrap{
+						width: 45px;
+						margin-left: 10px;
+						img{
+							width: 100%;
+							height: auto;
+						}
+					}
+				}
+			}
+			.right_section{
+				.photo_wrap{
+					height: 80vh;
+				}
+			}
+		}
+	}
+}

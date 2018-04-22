@@ -1,0 +1,257 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+//from 320 to 480
+
+@include mq($max-width: 480px){
+	html{
+		body{
+			.modal_window{
+				&.active.menu{
+					.wrapper{
+						.left_side{
+							display: none;
+						}
+						.middle_side{
+							grid-column: 1/13;
+							padding-top: 70px;
+							padding-left: 60px;
+							nav{
+								ul{
+									li{
+										margin: 17px 0;
+										a{
+											font-size: 22px;
+										}
+										
+									}
+								}
+							}
+							.accent_page{
+								margin-top: 60px;
+							}
+							footer{
+								padding-right: 20px;
+								p{
+									font-size: 13px;
+								}
+							}
+						}
+						.right_side{
+							display: none;
+						}
+						.instagram_wrap{
+							.rotate_text{
+								margin-top: 50px;
+								margin-left: -20px;
+
+							}
+							.wrap_logo{
+								margin-top: 38px;
+								margin-left: 11px;
+							}
+						}
+					}
+				}
+			}
+			.left_sidebar{
+				
+				.instagram_wrap{
+					.rotate_text{
+						font-size: 12px;
+					}
+				}
+				.pagin_wrap{
+					.current_page_wrap{
+						font-size: 0.6rem;
+						height: 15px;
+					}
+					.stripe{
+						width: 12px;
+					}
+					.amount_page{
+						font-size: 0.6rem;
+					}
+				}
+				.next_chapter_wrap{
+					.rotate_text{
+						font-size: 9px;
+					}
+				}
+			}
+			.screen_wrap{
+				.left_section{
+					
+				}
+				.middle_section{
+					
+					.screen_name_wrap{
+						width: 82%;
+						margin-left: 0;
+						padding-left: 60px;
+						div{
+							h1{
+								font-size: 26px;
+								line-height: 30px;
+							}
+						}
+						.content{
+							
+						}
+					}
+
+					.link_wrap{
+						
+						a{
+							border-bottom: $white solid 2px;
+						}
+					}
+				}
+				.right_section{
+					display: none;
+				}
+				&.main_screen{
+					.middle_section{
+						.screen_name_wrap{
+							top: 0;
+							left: 0;
+							position: relative;
+							margin: 0;
+							transform: translateY(0);
+							margin-top: 65vh;
+
+						}
+						.youtube_link_wrap{
+							top: 0;
+							left: 0;
+							position: relative;
+							padding-left: 60px;
+							.icon_wrap{
+								width: 35px;
+							}
+						}
+					}
+				}
+				&.training_with_me{
+					.middle_section{
+						.screen_name_wrap{
+							.content{
+								width: 90%;
+								margin-top: 30px;
+								div{
+									margin-bottom: 15px;
+									p{
+										font-size: 13px;
+										line-heigth: 20px;
+									}
+								}
+								.link_wrap{
+									margin-right: 0px;
+								}
+							}
+						}
+					}
+				}
+				&.your_way{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+
+								width: 85%;
+								margin-top: 25px;
+								.tab_wrap{
+									.step_wrap{
+										p{
+											font-size: 14px;
+										}
+									}
+								}
+							
+								
+							}
+						}
+					}
+				}
+				&.my_wards{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								$width: 72vw;
+								transform: translateX(0);
+								width: $width;
+								height: $width;
+								margin-top: 2vh;
+								#wards_onright{
+									left: $width;
+									top: 80px;
+									width: 56px;
+									height: 48px;
+								}
+								.slider_wrap{
+									width: 100%;
+									.slide{
+
+									}
+								}
+								.link_wrap{
+									a{
+										border-bottom: 2px solid $white;
+									}
+								}
+								
+							}
+							
+						}
+					}
+				}
+				&.ask_page{
+					.middle_section{
+						
+						.screen_name_wrap{
+							margin-top: 12vh;
+							.content{
+								.tabs_wrap{
+									.container_tab{
+										.question_wrap{
+											padding-top: 10px;
+											padding-bottom: 10px;
+											p{
+												font-size: 12px;
+											}
+										}
+										.answer_wrap{
+											p{
+												font-size: 12px;
+											}
+										}
+									}
+								}
+								
+								
+							}
+							
+						}
+					}
+				}
+				&.contacts_block{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								ul{
+									li{
+										a{
+											font-size: 18px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

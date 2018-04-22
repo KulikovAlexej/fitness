@@ -1,0 +1,17 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "media-queries";
+
+@import 'parts/template';
+@import 'parts/askPage';
+
+html{
+	body{
+		aside{
+			.pagin_wrap{
+				color: $white;
+			}
+		}
+	}
+}

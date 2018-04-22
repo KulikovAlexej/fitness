@@ -1,0 +1,92 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+// from 1025 to 1280px
+@include mq($max-width: 1280px){
+	html{
+		body{
+			.modal_window{
+				&.youtube{
+
+				}
+				&.menu{
+
+				}
+			}
+			.hamburger_wrap{
+			}
+			.left_sidebar{
+				.instagram_wrap{
+
+				}
+				.pagin_wrap{
+
+				}
+				.next_chapter_wrap{
+
+				}
+			}
+			.screen_wrap{
+				.left_section{
+
+				}
+				.middle_section{
+					.screen_name_wrap{
+						div{
+							h1{
+								font-size: 55px;
+								line-height: 58px;
+							}
+						}
+						.content{
+
+						}
+					}
+					.link_wrap{
+
+					}
+				}
+				&.main_screen{
+
+				}
+				&.training_with_me{
+					.middle_section{
+						.content{
+							width: 39%;
+							div{
+								p{
+									font-size: 15px;
+									line-height: 23px;
+								}
+							}
+							.link_wrap{
+								margin-top: 50px;
+								margin-right: -45px;
+							}
+						}
+					}
+					
+				}
+				&.your_way{
+					.middle_section{
+						.screen_name_wrap{
+							.content{
+								width: 70%;
+							}
+						}
+					}
+				}
+				&.my_wards{
+					
+				}
+				&.ask_page{
+					
+				}
+				&.contacts_block{
+					
+				}
+			}
+		}
+	}
+}
+

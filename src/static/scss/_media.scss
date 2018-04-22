@@ -115,7 +115,7 @@
 			
 		}
 		.screen_wrap{
-			background-image: none;
+			// background-image: none;
 			background-color: $darkGrey;
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -131,9 +131,10 @@
 		}
 		.screen_wrap.training_with_me{
 			// background-image: url(../images/second_photo.jpg);
+			background-image: url(../images/main_photo_02_768.jpg);
 			.middle_section{
-				background-image: url(../images/main_photo_02_768.jpg);
-				.content_block{
+				background-image: none;
+				.content{
 					div{
 						p{
 							color: $white;
@@ -148,6 +149,12 @@
 				}
 			}
 		}
+		.screen_wrap.your_way{
+			background-image: url(../images/main_foto_03_1280px.jpg);
+			.middle_section{
+				background-image: none;
+			}
+		}
 	}
 }
 @include mq($max-width: 480px){
@@ -156,8 +163,8 @@
 			.screen_wrap{}
 			.screen_wrap.training_with_me{
 				.middle_section{
-					background-image: none;
-					background-color: $darkGrey;
+					// background-image: none;
+					// background-color: $darkGrey;
 				}
 			}
 		}

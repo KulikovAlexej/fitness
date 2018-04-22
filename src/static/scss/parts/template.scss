@@ -1,0 +1,221 @@
+@import "../vars";
+@import "../libs";
+
+h1,h2,h3,h6,p,body{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Open Sans';
+	font-weight: 700;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	background-color: $darkGrey;
+
+	.hamburger_wrap{
+		height: 20px;
+		width: 15px;
+		// background-color: orange;
+		position: fixed;
+		right: 30px;
+		top: 30px;
+		cursor: pointer;
+		z-index: 1;
+		div{
+			width: 15px;
+			height: 3px;
+			margin-top: 5px;
+			background: $black;
+			margin-left: auto;
+			margin-right: auto;
+			&:nth-child(1){
+				margin-top: 0;
+			}
+		}				
+	}
+	.left_sidebar{
+		height: 100vh;
+		width: $asideWidth;
+		position: fixed;
+		// background-color: pink;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 10;
+		overflow: hidden;
+		.instagram_wrap{
+			// height: 100px;
+			// width: 10px;
+			// background-color: yellow;
+			.rotate_text{
+				transform: rotate(-90deg);
+				margin-top: 75px;
+				font-size: 14px;
+				font-weight: bold;
+				line-height: 13px;
+				a{
+					text-decoration: none;
+					color: $white;
+				}
+			}
+			.wrap_logo{
+				width: 19px;
+				height: 19px;
+				// background-color: green;
+				margin: 0 auto;
+				margin-top: 43px;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.pagin_wrap{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 100px;
+			width: 50px;
+			// background-color: green;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.current_page_wrap{
+				margin-bottom: 8px;
+				font-size: 0.8rem;
+				color: $pink;
+				// background-color: green;
+				height: 20px;
+				overflow: hidden;
+				p{
+					transition: .4s all;
+				}
+			}
+			.stripe{
+				width: 15px;
+				height: 2px;
+				background-color: $white;
+			}
+			.amount_page{
+				margin-top: 8px;
+				font-size: 0.8rem;
+				color: $white;
+			}
+		}
+		.next_chapter_wrap{
+			height: 80px;
+			width: 20px;
+			// background-color: grey;
+			.rotate_text{
+				text-transform: uppercase;
+				transform: rotate(-90deg);
+				margin-top: -10px;
+				font-size: 11px;
+				color: $white;
+				font-weight: 600;
+			}
+			#stripe{
+				width: 3px;
+				height: 64px;
+				background-color: $pink;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				bottom: 0;
+			}
+		}
+	}
+	.screen_wrap{
+		height: 100vh;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-column-gap: $gap;
+		position: relative;
+		transition: .4s all ease-in-out;
+		.left_section{
+			height: 100vh;
+			grid-column: 1/4;
+			background-color: $darkGrey;
+		}
+		.middle_section{
+			height: 100vh;
+			background-image: url(../images/main_photo.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			grid-column: 4/10;
+			.screen_name_wrap{
+				// background-color: blue;
+				position: absolute;
+				display: flex;
+				flex-direction: row;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 9%;
+				z-index: 200;
+				font-size: 2rem;
+				// border: solid green 2px;
+				width: 80%;
+				.content{
+					position: absolute;
+					right: 0;
+				}
+				h1{
+					text-transform: uppercase;
+					font-weight: 900;
+					line-height: 80px;
+					font-size: 70px;
+					&:nth-child(1){
+						color: $pink;
+						// line-height: 2rem;
+					}
+					&:nth-child(2){
+						color: $white;
+					}
+				}
+			}
+			.link_wrap{
+				right: 0;
+				z-index: 200;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				// margin-top: 35px;
+				margin-right: 35px;
+				a{
+					text-transform: uppercase;
+					color: $pink;
+					font-size: 11px;
+					text-decoration: none;
+					padding-left: 10px;
+					padding-right: 10px;
+					padding-bottom: 5px;
+					border-bottom: solid $darkGrey 2px;
+				}
+
+			}
+
+		}
+		.right_section{
+			height: 100vh;
+			background-color: $lightGrey;
+			grid-column: 10/13;
+			.photo_wrap{
+				position: absolute;
+				height: 90vh;
+				z-index: 100;
+				right: 15%;
+				top: 50%;
+				transform: translateY(-50%);
+				img{
+					height: 100%;
+					width: auto;
+				}
+			}
+		}
+		
+	}
+}

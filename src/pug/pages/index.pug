@@ -1,14 +1,53 @@
 doctype html
 html(lang='ru=RU')
 	head
-		title Hello World
+		title Ritochhka
 		//- link(href='css/main.css')
 		meta(http-equiv='Content-Type', content='text/html', charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		//- link(rel='icon', href='img/favicon/favicon.png', type='image/x-icon')
 		link(rel='stylesheet', href='static/css/main.css')
 	body
-		.modal_youtube
+		.modal_window.menu
+			.wrapper
+				.instagram_wrap
+					.rotate_text
+						a(href='#') ritochkkka
+					.wrap_logo
+						img(src='static/images/icons/inst_ico.png')
+				.close_wrap
+					img(src='static/images/icons/cross.svg')
+				.left_side
+				.middle_side
+					nav
+						ul.ordinary_page
+							li
+								a(href='https://learn.javascript.ru/metrics') Обо мне
+							li
+								a(href='https://learn.javascript.ru/metrics') Мои подопечные
+							li
+								a(href='https://learn.javascript.ru/metrics') Вопрос - ответ
+							li
+								a(href='https://learn.javascript.ru/metrics') Контакты
+						ul.accent_page
+							li
+								a(href='https://learn.javascript.ru/metrics') Анкета
+							li
+								a(href='https://learn.javascript.ru/metrics') Оплата курса
+					footer
+						p ❤Спасибо за дизайн и разработку <a href='https://vk.com/id133644533'>Дарье Куликовой</a> и <a href='https://vk.com/id267295185'>Лёше Куликову</a> 
+
+				.right_side
+		.modal_window.youtube
+			.wrapper
+				.close_wrap
+					img(src='static/images/icons/cross.svg')
+				.frame_wrap
+					iframe(width='560', height='315', src='https://www.youtube.com/embed/f0wv89CdksM', frameborder="0", allow="encrypted-media")
+		.hamburger_wrap
+				.stripe
+				.stripe
+				.stripe
 		aside.left_sidebar
 			.instagram_wrap
 				.rotate_text
@@ -17,10 +56,9 @@ html(lang='ru=RU')
 					img(src='static/images/icons/inst_ico.png')
 			.pagin_wrap
 				.current_page_wrap
-					p 01
 				.stripe
 				.amount_page
-					p 07
+					p
 				.points_wrap
 					.point.active
 					.point
@@ -30,14 +68,13 @@ html(lang='ru=RU')
 			.next_chapter_wrap
 				.rotate_text СЛЕДУЮЩИЙ
 				#stripe
-		section.screen_wrap.main_screen(data-screen='screen_01')
+		section.screen_wrap.main_screen
 			.left_section
 			.middle_section
 				.screen_name_wrap
 					div
 						h1 ПЕРСОНАЛЬНЫЙ
 						h1 ТРЕНЕР
-					.content
 				.youtube_link_wrap
 					a(href='#') смотри тренировку
 					.icon_wrap
@@ -45,11 +82,8 @@ html(lang='ru=RU')
 			.right_section
 				.photo_wrap
 					img(src='static/images/second_photo.jpg' alt='fitness')
-			.hamburger_wrap
-				.stripe
-				.stripe
-				.stripe
-		section.screen_wrap.training_with_me(data-screen='screen_02')
+			
+		section.screen_wrap.training_with_me
 			.left_section
 			.middle_section
 				.screen_name_wrap
@@ -70,10 +104,10 @@ html(lang='ru=RU')
 						div
 							p 04
 							p Ты будешь питаться <span>разнообразно</span>, а заниматься <span>с удовольствием</span>.
-						.about_me
+						.link_wrap
 							a(href='#') Узнай про меня
 			.right_section
-		section.screen_wrap.your_way(data-screen='screen_03')
+		section.screen_wrap.your_way
 			.left_section
 			.middle_section
 				.screen_name_wrap
@@ -81,32 +115,124 @@ html(lang='ru=RU')
 						h1 твой путь
 						h1 к новому телу
 					.content
+						.tab_wrap
+							.step_wrap
+								p шаг 01
+							.step_wrap
+								p шаг 02
+							.step_wrap
+								p шаг 03
 						.slider_wrap.clearfix
 							.slide
 								.trim
-									h6.hidden_down поставить цель
-								.step_wrap
-									p шаг 01
-									.stripe
+									h6.visibleY поставить цель
 								.body_part.trim
-									p.hidden_down 1Ты хочешь похудеть, подтянуть тело или просто всегда оставаться в форме? Ответь на все эти вопросы в анкете и отправь мне, а самое главное - не забудь про фото "до".
+									p.visibleY Ты хочешь похудеть, подтянуть тело или просто всегда оставаться в форме? Ответь на все эти вопросы в анкете и отправь мне, а самое главное не забудь про фото до. 
 							.slide
 								.trim
-									h6.hidden_down поставить цель
-								.step_wrap
-									p шаг 02
-									.stripe
+									h6.hidden_down Оценить результат
 								.body_part
-									p.hidden_down 2Ты хочешь похудеть, подтянуть тело или просто всегда оставаться в форме? Ответь на все эти вопросы в анкете и отправь мне, а самое главное - не забудь про фото "до".
+									p.hidden_down Первый результат заметен уже через месяц, какой он будет зависит только от тебя. Я гарантирую, что если ты будешь следовать моим рекомендациям он превзойдет все ожидания.
 							.slide
 								.trim
-									h6.hidden_down поставить цель
-								.step_wrap
-									p шаг 03
-									.stripe
+									h6.hidden_down Начать новый образ жизни
 								.body_part
-									p.hidden_down 3Ты хочешь похудеть, подтянуть тело или просто всегда оставаться в форме? Ответь на все эти вопросы в анкете и отправь мне, а самое главное - не забудь про фото "до".
+									p.hidden_down Самый сложный этап пройден и теперь ты умешь следить за питанием, поймешь какие именно упражнения подходят именно тебе, главное помни: теперь это твой новый образ жизни. Я даю знания, которые помогут держать форму всегда.
 			.right_section
-
+		section.screen_wrap.my_wards
+			.left_section
+			.middle_section
+				.screen_name_wrap
+					div
+						h1 мои
+						h1 подопечные
+					.content
+						#wards_onright
+							img(src='static/images/icons/arrow_ward.svg')
+						.slider_wrap.clearfix
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_1.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_2.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_3.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_4.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_5.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_6.jpg')
+							.slide
+								.img_wrap
+									img(src='./static/images/wards/ph_pod_7.jpg')
+						.pagin_wrap.wards
+							.counter_slides.trim
+							.amount_slides
+								span
+						.link_wrap
+							a(href='#') Читать отзывы
+			.right_section
+		section.screen_wrap.ask_page
+			.left_section
+			.middle_section
+				.screen_name_wrap
+					div
+						h1 отвечу на все
+						h1 вопросы
+					.content
+						.tabs_wrap
+							.container_tab
+								.question_wrap
+									p Могу ли я заниматься дома?
+									.toggle_btn
+										.first_stripe
+										.second_stripe
+								.answer_wrap
+									p Да, конечно. Я составляю программы тренировок не только для зала, но и для занятий в домашних условиях, если у тебя нет возможности заниматься в зале.
+							.container_tab
+								.question_wrap
+									p Как будут проходить тренировки?
+									.toggle_btn
+										.first_stripe
+										.second_stripe
+								.answer_wrap
+									p Я буду скидывать тебе видео с тренировкой, в которой расскажу нужно делать каждое упражнение, прям как в этом видео
+							.container_tab
+								.question_wrap
+									p Точно ли я похудею, наберу вес или изменю качество тела?
+									.toggle_btn
+										.first_stripe
+										.second_stripe
+								.answer_wrap
+									p Тут все зависит только от тебя. Со своей стороны я гарантирую, что соблюдая мою программу питания и тренировок вы обязательно добьетесь поставленных целей.
+							
+							
+						.link_wrap
+							a(href='/questions.html') Читать все вопросы
+			.right_section
+		section.screen_wrap.contacts_block
+			.left_section
+			.middle_section
+				.screen_name_wrap
+					div
+						h1 всегда
+						h1 на связи
+					.content
+						ul
+							li
+								a(href="#") ritochka.husanova@mail.ru
+							li
+								a(href="#") WhatsApp
+							li
+								a(href="#") vk
+							li
+								a(href="#") instagram
+			.right_section
 		script(src='static/js/libs.min.js')
 		script(src='static/js/main.js')

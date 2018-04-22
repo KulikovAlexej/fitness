@@ -1,0 +1,199 @@
+@import "../../vars";
+@import "../../libs";
+@import "../../media-queries";
+// to 320
+
+@include mq($max-width: 320px){
+	html{
+		body{
+			.modal_window{
+				&.active{
+					.wrapper{
+						.left_side{
+							
+						}
+						.middle_side{
+							
+							nav{
+								ul{
+									li{
+										margin: 15px 0;
+										a{
+											font-size: 20px;
+										}
+										
+									}
+								}
+							}
+							.accent_page{
+								margin-top: 40px;
+							}
+							footer{
+								padding-right: 25px;
+								padding-bottom: 10px;
+								p{
+									font-size: 11px;
+								}
+							}
+						}
+						.right_side{
+							display: none;
+						}
+						.instagram_wrap{
+							.rotate_text{
+								margin-top: 50px;
+								margin-left: -20px;
+
+							}
+							.wrap_logo{
+								margin-top: 38px;
+								margin-left: 11px;
+							}
+						}
+					}
+				}
+			}
+			.screen_wrap{
+				.left_section{
+					
+				}
+				.middle_section{
+					
+					.screen_name_wrap{
+						width: 80%;
+						div{
+							h1{
+								font-size: 26px;
+							}
+						}
+						.content{
+							
+						}
+					}
+
+					.link_wrap{
+						
+						a{
+							
+						}
+					}
+				}
+				.right_section{
+					display: none;
+				}
+				&.main_screen{
+					.middle_section{
+						.screen_name_wrap{
+							
+						}
+						.youtube_link_wrap{
+							
+						}
+					}
+				}
+				&.training_with_me{
+					.middle_section{
+						.screen_name_wrap{
+							.content{
+								
+								div{
+									p{
+										
+									}
+								}
+							}
+						}
+					}
+				}
+				&.your_way{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								width: 95%;
+								.tab_wrap{
+									.step_wrap{
+										p{
+											
+										}
+									}
+								}
+
+								
+							}
+						}
+					}
+				}
+				&.my_wards{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								$width: 215px;
+								width: $width;
+								height: $width;
+								transform: translateX(0);
+								#wards_onright{
+									left: $width;
+									top: 40px;
+								}
+								.slider_wrap{
+									width: 100%;
+									.slide{
+
+									}
+								}
+								
+							}
+							
+						}
+					}
+				}
+				&.ask_page{
+					.middle_section{
+						
+						.screen_name_wrap{
+							
+							.content{
+								.tabs_wrap{
+									.container_tab{
+										.question_wrap{
+											
+											p{
+												
+											}
+										}
+										.answer_wrap{
+											p{
+												
+											}
+										}
+									}
+								}
+								
+								
+							}
+							
+						}
+					}
+				}
+				&.contacts_block{
+					.middle_section{
+						
+						.screen_name_wrap{
+							.content{
+								ul{
+									li{
+										a{
+											
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

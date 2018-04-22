@@ -1,0 +1,84 @@
+@import "../vars";
+@import "../libs";
+
+body{
+	.screen_wrap.my_wards{
+		.middle_section{
+			background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/04_main_page.jpg);
+			background-position-y: center;
+			.screen_name_wrap{
+				.content{
+					width: 420px;
+					transform: translateX(0%);
+					right: 0;
+					top: -130px;
+					display: flex;
+					flex-direction: column;
+					#wards_onright{
+						position: absolute;
+						left: 420px;
+						top: 160px;
+						transform: translateX(-50%);
+						width: 72px;
+						height: 62px;
+						background-color: $pink;
+						z-index: 300;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+						img{
+							width: 45%;
+						}
+						
+					}
+					.slider_wrap{
+						width: 420px;
+						overflow: hidden;
+						display: flex;
+						position: relative;
+						.slide{
+							transition: all .5s;
+							min-width: 100%;
+							width: 100%;
+							// background-color: green;
+							height: 420px;
+							.img_wrap{
+								img{
+									width: 100%;
+								}
+							}
+							
+						}
+					}
+					.pagin_wrap{
+						z-index: 300;
+						font-size: 12px;
+						display: flex;
+						.counter_slides{
+							height: 17px;
+							span{
+								color: $darkGrey;
+								// color: red;
+								display: block;
+								transition: all .2s linear;
+							}
+						}
+						
+					}
+					.link_wrap{
+						align-self: flex-end;
+						margin-top: 10px;
+						a{
+							color: $pink;
+							// color: red;
+							text-decoration: none;
+							border-bottom: 2px solid $darkGrey;
+							font-size: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
