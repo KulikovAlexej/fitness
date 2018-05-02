@@ -8,9 +8,17 @@
 
 html{
 	body{
-		aside{
+		.left_sidebar{
 			.pagin_wrap{
-				color: $white;
+				a{
+					color: $white;
+					transform: rotateZ(-90deg);
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 11px;
+					line-height: 15px;
+				}
+
 			}
 		}
 	}
