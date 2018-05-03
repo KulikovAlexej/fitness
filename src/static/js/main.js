@@ -392,6 +392,9 @@ let menuPopUp = new PopUp(menuPopUpObj);
 youtubePopUp.init();
 menuPopUp.init();
 
+let hohotun = new Hoho();
+hohotun.sayHoho();
+
 })();
 
 // function outer () {
