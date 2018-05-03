@@ -397,40 +397,7 @@ hohotun.sayHoho();
 
 })();
 
-// function outer () {
-// 	var otherName = 'Sergo';
-// 	function sayHello ( name ) {
-// 		const magicNumber = 42;
-// 		console.log(`Hello, ${otherName}!`)
-// 	}
-// 	sayHello('Alex')
-// }
-
-// outer();
-
-// function sum (operand1) {
-// 	let privateOperand = 10;
-// 	return function (operand2) {
-// 		let abz = 123;
-// 		console.log(operand1 + operand2)
-// 	}
-// }
-// let plus3 = sum(3);
-// plus3(9);
 
 
-let request = new XMLHttpRequest();
-function reqFunc () {
-	if (request.readyState == 4){
-		let status = request.status;
-		if (status == 200) {
-			console.log(request.responseText)
-		}
-	}
-}
-
-request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=L,uk&appid=cb30165fbee1109708d696ef9dfffd36');
-request.onreadystatechange = reqFunc;
-request.send();
 
 

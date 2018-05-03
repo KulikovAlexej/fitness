@@ -39,21 +39,3 @@
 // 	window.PopUp = PopUp;
 
 // });
-(function(){
-	
-	class Hoho {
-		sayHoho(){
-			console.log('hoho')
-		}
-	}
-
-	window.Hoho = Hoho;
-})();
-(function(){
-	let a = 10;
-	class HIHI {
-		say(){
-			console.log(1234)
-		}
-	}
-})();

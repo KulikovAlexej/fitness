@@ -16,12 +16,22 @@ gulp.task('scripts', () =>
         .pipe(browserSync.reload({
 			stream: true
 		}))
+
 );
 
 gulp.task('scriptsLib', () =>
     gulp.src(['src/static/libs/bounce.js/bounce.min.js'])
     	.pipe(gp.concat('libs.min.js'))
     	.pipe(gulp.dest('build/static/js/'))
+    	.pipe(browserSync.reload({
+			stream: true
+		}))
+);
+
+gulp.task('concatClasses', () =>
+    gulp.src('src/static/js/modules/**/*.js')
+    	.pipe(gp.concat('classes.js'))
+    	.pipe(gulp.dest('src/static/js/'))
     	.pipe(browserSync.reload({
 			stream: true
 		}))
@@ -78,13 +88,14 @@ gulp.task('watch', function(){
 	gulp.watch('src/pug/pages/**/*.pug', gulp.series('pug'));
 	gulp.watch('src/static/scss/**/*.scss', gulp.series('sass'));
 	gulp.watch('src/static/js/**/*.js', gulp.series('scripts'));
+	gulp.watch('src/static/js/modules/**/*.js', gulp.series('concatClasses'));
 	gulp.watch('src/static/libs/**/*.js', gulp.series('scriptsLib'));
 	gulp.watch('src/static/img/**/*', gulp.series('imgDev'));
 });
 
 gulp.task('default',
 	gulp.series(
-		gulp.parallel('pug','sass', 'scripts','imgDev'),
+		gulp.parallel('pug','sass', 'concatClasses', 'scripts', 'imgDev'),
 		gulp.parallel('watch','serve')
 ))
 
