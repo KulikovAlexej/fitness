@@ -1,41 +1,44 @@
-// (function(){
+(function(){
 
-// 	'use strict'
+	'use strict'
 
-// 	class PopUp {
-// 		constructor(popUpObject){
-// 			this.popUp = popUpObject.popUp;
-// 			this.closeBtn = popUpObject.closeBtn;
-// 			this.openBtn = popUpObject.openBtn;
-// 			this.activated = false;
-// 		}
 
-// 		makeVisible () {
-// 			this.popUp.classList.add('active');
-// 			modal_observer.changeActivity();
-// 		}
 
-// 		makeHidden () {
-// 			this.popUp.classList.remove('active');
-// 			modal_observer.changeActivity();
-// 		}
+	class PopUp {
+		constructor(popUpObject, modalObserver){
+			this.popUp = popUpObject.popUp;
+			this.closeBtn = popUpObject.closeBtn;
+			this.openBtn = popUpObject.openBtn;
+			this.activated = false;
+			this.modalObserver = modalObserver;
+		}
 
-// 		init () {
-// 			this.openBtn.addEventListener('click', (event) => {
-// 				if(modal_observer.activeModal == false){
-// 					this.makeVisible();
-// 					// console.log(modal_observer.activeModal);
-// 				}
-// 			})
-// 			this.closeBtn.addEventListener('click', ( event ) => {
-// 				if( modal_observer.activeModal == true ) {
-// 					this.makeHidden();
-// 					// console.log( modal_observer.activeModal );
-// 				}
-// 			})
-// 		}
-// 	}
+		makeVisible () {
+			this.popUp.classList.add('active');
+			this.modalObserver.changeActivity();
+		}
 
-// 	window.PopUp = PopUp;
+		makeHidden () {
+			this.popUp.classList.remove('active');
+			this.modalObserver.changeActivity();
+		}
 
-// });
+		init () {
+			this.openBtn.addEventListener('click', (event) => {
+				if(this.modalObserver.activeModal == false){
+					this.makeVisible();
+					// console.log(modal_observer.activeModal);
+				}
+			})
+			this.closeBtn.addEventListener('click', ( event ) => {
+				if( this.modalObserver.activeModal == true ) {
+					this.makeHidden();
+					// console.log( modal_observer.activeModal );
+				}
+			})
+		}
+	}
+
+	window.PopUp = PopUp;
+
+})();
