@@ -13,34 +13,14 @@
 		}
 
 		init() {
-			console.log(1234567890);
+
 			this.screens[0].classList.add('active');
 			this.createPageList();
-			// this.body.addEventListener('wheel', this.handleWheel);
-
-			
 
 			this.screens[this.activeScreen].addEventListener('transitionend', (event) => {
 				this.notAnimated = true;
 			})
 		}
-
-		// handleWheel (event) {
-		// 	console.log(1230)
-		// 	let delta = event.deltaY || event.detail || event.wheelDelta;
-		// 	if(delta > 0) {
-		// 		this.moveScreen('down')
-		// 	}
-		// 	else if(delta < 0) {
-		// 		this.moveScreen('up')
-		// 	}
-
-		// }
-
-		// moveScreen(){
-		// 	console.log('go')
-		// }
-
 
 		moveScreen (direction) {
 			if(direction == 'down'){
@@ -49,10 +29,10 @@
 					this.notAnimated = false;
 					this.activeScreen++;
 					this.reqCssPos = this.reqCssPos - 100;
-					this.screens.forEach(function(screen) {
+					this.screens.forEach(screen => {
 						screen.style.transform = 'translateY(' + this.reqCssPos + '%)';
 					})
-					this.pageNumbers.forEach(function(pageNumber) {
+					this.pageNumbers.forEach(pageNumber => {
 						pageNumber.style.transform = 'translateY(' + this.reqCssPos + '%)';
 					})
 					// notAnimated = true;
@@ -68,10 +48,10 @@
 					this.notAnimated = false;
 					this.activeScreen--;
 					this.reqCssPos = this.reqCssPos + 100;
-					this.screens.forEach(function(screen) {
+					this.screens.forEach(screen => {
 						screen.style.transform = 'translateY(' + this.reqCssPos + '%)';
 					})
-					this.pageNumbers.forEach(function(pageNumber) {
+					this.pageNumbers.forEach(pageNumber => {
 						pageNumber.style.transform = 'translateY(' + this.reqCssPos + '%)';
 					})
 				}
@@ -95,7 +75,6 @@
 
 			this.pageNumbers = document.querySelectorAll('.current_page_wrap p');
 		}
-
 
 	}
 	
