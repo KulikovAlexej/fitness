@@ -18,12 +18,10 @@
 	}
 
 	body.addEventListener('wheel', (event) => {
-		// console.log(handleWheel());
 		pageScroll.moveScreen(handleWheel());
 	});
 
 	body.addEventListener('touchstart', (event) => {
-		// console.log('start '+ event.changedTouches[0].pageX);
 		startY = event.changedTouches[0].pageY;
 	})
 
@@ -37,6 +35,18 @@
 			pageScroll.moveScreen('down')
 		}
 	});
+
+	body.addEventListener('keydown', (event) => {
+
+		if( event.keyCode == 38 ){
+			pageScroll.moveScreen('up');
+		}
+		else if( event.keyCode == 40 ){
+			pageScroll.moveScreen('down')
+		}
+
+	});
+
 
 	//////////////////////////////////////////////////////////////////////
 
