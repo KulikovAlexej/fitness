@@ -3,11 +3,17 @@
 @import "vars";
 @import "media-queries";
 
-@import 'parts/template';
-@import 'parts/askPage';
+@import 'parts/commonStyles';
+@import 'parts/aside';
+// @import 'parts/askPage';
 
 html{
 	body{
+		background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/05_main_page.jpg);
+		background-position-y: center;
+		background-position-x: center;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 		.left_sidebar{
 			.pagin_wrap{
 				a{
@@ -19,6 +25,80 @@ html{
 					line-height: 15px;
 				}
 
+			}
+		}
+		.fixed_layout{
+			
+			// position: fixed;
+			// background-color: pink;
+			// // opacity: 0.8;
+			// z-index: 1;
+		}
+		.fixed_layout{
+			min-height: 100vh;
+			width: 100%;
+			z-index: 3;
+			background: transparent;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			
+			// background-attachment: fixed;
+			background-attachment: fixed;
+			.left_section{
+				min-height: 100vh;
+				background-color: $darkGrey;
+				background-attachment: fixed;
+				grid-column: 1/4;
+				position: relative;
+			}
+			.middle_section{
+				min-height: 100vh;
+				// background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/05_main_page.jpg);
+				// background-position-y: center;
+				// background-position-x: center;
+				// background-attachment: fixed;
+				// background-repeat: no-repeat;
+				grid-column: 4/10;
+				position: relative;
+				.screen_name_wrap{
+					position: absolute;
+					display: flex;
+					flex-direction: row;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -35%;
+					z-index: 200;
+					font-size: 2rem;
+					width: 120%;
+					h1{
+						text-transform: uppercase;
+						font-weight: 900;
+						line-height: 80px;
+						font-size: 70px;
+						&:nth-child(1){
+							color: $pink;
+						}
+						&:nth-child(2){
+							color: $white;
+						}
+					}
+				}
+				.content{
+					margin-top: 50vh;
+					position: relative;
+					margin-right: -100px;
+					.tabs_wrap{
+						background-color: pink;
+						width: 400px;
+					}
+				}
+			}
+			.right_section{
+				grid-column: 10/13;
+				background-color: $lightGrey;
+				background-attachment: fixed;
+				min-height: 100vh;
+				position: relative;
 			}
 		}
 	}

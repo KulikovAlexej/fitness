@@ -9,37 +9,10 @@ html {
 	width: 100%;
 }
 
-.clearfix:after{
-	content: "";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
 
-.trim{
-	overflow: hidden;
-}
-
-.hidden{
-	visibility: hidden;
-}
-
-.hidden_up{
-	transform: translateY(-100%);
-	opacity: 0;
-}
-.hidden_down{
-	transform: translateY(100%);
-	opacity: 0;
-}
-.visibleY{
-	transform: translateY(0%);
-	opacity: 1;
-	transition: all .5s linear;
-}
-
+@import 'parts/commonStyles';
 @import 'parts/template';
+@import 'parts/aside';
 @import 'parts/mainScreen';
 @import 'parts/trainingWithMe';
 @import 'parts/yourWay';

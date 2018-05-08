@@ -1,0 +1,47 @@
+@import "../vars";
+@import "../libs";
+
+
+
+html{
+	body{
+		font-family: 'Open Sans';
+		font-weight: 700;
+	}
+}
+
+h1,h2,h3,h6,p,body{
+	margin: 0;
+	padding: 0;
+}
+
+.clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.trim{
+	overflow: hidden;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.hidden_up{
+	transform: translateY(-100%);
+	opacity: 0;
+}
+.hidden_down{
+	transform: translateY(100%);
+	opacity: 0;
+}
+.visibleY{
+	transform: translateY(0%);
+	opacity: 1;
+	transition: all .5s linear;
+}
+
