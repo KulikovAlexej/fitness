@@ -79,7 +79,10 @@
 					}
 				}
 				&.ask_page{
-					
+					.middle_section{
+						background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/04_main_page_768.jpg);
+						background-position-y: center;
+					}
 				}
 				&.contacts_block{
 					
