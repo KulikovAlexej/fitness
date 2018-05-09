@@ -28,11 +28,7 @@ html{
 			}
 		}
 		.fixed_layout{
-			
-			// position: fixed;
-			// background-color: pink;
-			// // opacity: 0.8;
-			// z-index: 1;
+
 		}
 		.fixed_layout{
 			min-height: 100vh;
@@ -41,8 +37,6 @@ html{
 			background: transparent;
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
-			
-			// background-attachment: fixed;
 			background-attachment: fixed;
 			.left_section{
 				min-height: 100vh;
@@ -84,6 +78,7 @@ html{
 					margin-left: 50%;
 					.tabs_wrap{
 						width: 430px;
+						margin-bottom: 20px;
 						.container_tab{
 							border-bottom: 2px solid $darkGrey;
 							// background-color: grey;
@@ -135,11 +130,9 @@ html{
 								}
 							}
 							.answer_wrap{
-								// background-color: yellow;
 								max-height: 0;
 								overflow: hidden;
 								transition: max-height .2s linear;
-								// padding-bottom: 20px;
 								&.active{
 									// display: block;
 								}
@@ -168,3 +161,6 @@ html{
 		}
 	}
 }
+
+
+@import "../../media-queries";
