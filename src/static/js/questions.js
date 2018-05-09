@@ -1,4 +1,3 @@
-console.log(1234);
 document.querySelectorAll('.toggle_btn').forEach((btn, i) => {
 	btn.addEventListener('click', (event) => {
 		console.log(123)

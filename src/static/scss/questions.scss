@@ -43,6 +43,7 @@ html{
 				background-position-x: center;
 				background-repeat: no-repeat;
 				background-size: cover;
+
 			}
 			.right_section{
 				height: 100vh;
@@ -50,10 +51,108 @@ html{
 				background-color: $lightGrey;
 			}
 		}
-		.block{
+		.screen_name_wrap{
+			position: fixed;
+			display: flex;
+			flex-direction: row;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 7%;
+			z-index: 200;
+			font-size: 2rem;
+			h1{
+				text-transform: uppercase;
+				font-weight: 900;
+				line-height: 80px;
+				font-size: 70px;
+				&:nth-child(1){
+					color: $pink;
+				}
+				&:nth-child(2){
+					color: $white;
+				}
+			}
+		}
+
+		.content{
 			position: relative;
-			width: 400px;
+			width: 30vw;
 			float: right;
+			margin-right: 10vw;
+			margin-top: 45vh;
+			.tabs_wrap{
+				// width: 430px;
+				margin-bottom: 20px;
+				.container_tab{
+					border-bottom: 2px solid $darkGrey;
+					// background-color: grey;
+					font-size: 1rem;
+					&:first-child{
+						border-top: 2px solid $darkGrey;
+					}
+					.question_wrap{
+						// background-color: blue;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						color: $darkGrey;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						cursor: pointer;
+						p{
+							font-size: 15px;
+							font-weight: 800;
+						}
+						.toggle_btn{
+							$size: 11px;
+							height: $size;
+							width: $size;
+							// background-color: pink;
+							position: relative;
+							.first_stripe{
+								height: $size/5;
+								width: $size;
+								background-color: $darkGrey;
+								position: absolute;
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%)
+							}
+							.second_stripe{
+								height: $size/5;
+								width: $size;
+								background-color: $darkGrey;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%) rotate(90deg);
+								transition: transform 1s;
+								&.active{
+									transform: translate(-50%, -50%) rotate(0deg)
+								}
+							}
+						}
+					}
+					.answer_wrap{
+						max-height: 0;
+						overflow: hidden;
+						transition: max-height .2s linear;
+						&.active{
+							// display: block;
+						}
+						p{
+							font-size: 12px;
+							font-weight: 600;
+							box-sizing: border-box;
+							border-bottom: 15px transparent solid;
+							a{
+								color: $pink;
+							}
+
+						}
+					}
+				}
+			}
 		}
 
 		// .fixed_layout{
@@ -99,84 +198,7 @@ html{
 		// 				}
 		// 			}
 		// 		}
-		// 		.content{
-		// 			margin-top: 50vh;
-		// 			position: relative;
-		// 			margin-left: 50%;
-		// 			.tabs_wrap{
-		// 				width: 430px;
-		// 				margin-bottom: 20px;
-		// 				.container_tab{
-		// 					border-bottom: 2px solid $darkGrey;
-		// 					// background-color: grey;
-		// 					font-size: 1rem;
-		// 					&:first-child{
-		// 						border-top: 2px solid $darkGrey;
-		// 					}
-		// 					.question_wrap{
-		// 						// background-color: blue;
-		// 						display: flex;
-		// 						align-items: center;
-		// 						justify-content: space-between;
-		// 						color: $darkGrey;
-		// 						padding-top: 20px;
-		// 						padding-bottom: 20px;
-		// 						cursor: pointer;
-		// 						p{
-		// 							font-size: 15px;
-		// 							font-weight: 800;
-		// 						}
-		// 						.toggle_btn{
-		// 							$size: 11px;
-		// 							height: $size;
-		// 							width: $size;
-		// 							// background-color: pink;
-		// 							position: relative;
-		// 							.first_stripe{
-		// 								height: $size/5;
-		// 								width: $size;
-		// 								background-color: $darkGrey;
-		// 								position: absolute;
-		// 								left: 50%;
-		// 								top: 50%;
-		// 								transform: translate(-50%, -50%)
-		// 							}
-		// 							.second_stripe{
-		// 								height: $size/5;
-		// 								width: $size;
-		// 								background-color: $darkGrey;
-		// 								position: absolute;
-		// 								top: 50%;
-		// 								left: 50%;
-		// 								transform: translate(-50%, -50%) rotate(90deg);
-		// 								transition: transform 1s;
-		// 								&.active{
-		// 									transform: translate(-50%, -50%) rotate(0deg)
-		// 								}
-		// 							}
-		// 						}
-		// 					}
-		// 					.answer_wrap{
-		// 						max-height: 0;
-		// 						overflow: hidden;
-		// 						transition: max-height .2s linear;
-		// 						&.active{
-		// 							// display: block;
-		// 						}
-		// 						p{
-		// 							font-size: 12px;
-		// 							font-weight: 600;
-		// 							box-sizing: border-box;
-		// 							border-bottom: 15px transparent solid;
-		// 							a{
-		// 								color: $pink;
-		// 							}
 
-		// 						}
-		// 					}
-		// 				}
-		// 			}
-		// 		}
 		// 	}
 		// 	.right_section{
 		// 		grid-column: 10/13;
@@ -206,10 +228,24 @@ html{
 				}
 				.middle_section{
 					grid-column: 2/13;
+
 				}
 				.right_section{
 					display: none;
 				}
+			}
+			.screen_name_wrap{
+				position: absolute;
+				top: 25%;
+				left: 0%;
+				margin-left: 13vw;
+			}
+			.content{
+				margin-left: 13vw;
+				margin-right: 0;
+				margin-top: 35vh;
+				width: 70vw;
+				float: left;
 			}
 		}
 	}
@@ -226,6 +262,15 @@ html{
 				}
 				.right_section{
 					display: none;
+				}
+			}
+			.screen_name_wrap{
+				left: 20%;
+				div{
+					h1{
+						font-size: 26px;
+						line-height: 30px;	
+					}
 				}
 			}
 		}
