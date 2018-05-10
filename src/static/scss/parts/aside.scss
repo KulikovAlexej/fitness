@@ -100,3 +100,22 @@ html{
 		}
 	}
 }
+
+@include mq($max-width: 1024px){
+	html{
+		body{
+			.left_sidebar{
+				width: 9%;
+				.instagram_wrap{
+
+				}
+				.pagin_wrap{
+
+				}
+				.next_chapter_wrap{
+
+				}
+			}
+		}
+	}
+}

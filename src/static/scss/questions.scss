@@ -81,7 +81,6 @@ html{
 			margin-right: 10vw;
 			margin-top: 45vh;
 			.tabs_wrap{
-				// width: 430px;
 				margin-bottom: 20px;
 				.container_tab{
 					border-bottom: 2px solid $darkGrey;
@@ -155,59 +154,7 @@ html{
 			}
 		}
 
-		// .fixed_layout{
-		// 	min-height: 100vh;
-		// 	width: 100%;
-		// 	z-index: 3;
-		// 	background: transparent;
-		// 	display: grid;
-		// 	grid-template-columns: repeat(12, 1fr);
-		// 	background-attachment: fixed;
-		// 	position: fixed;
-		// 	.left_section{
-		// 		min-height: 100vh;
-		// 		background-color: $darkGrey;
-		// 		background-attachment: fixed;
-		// 		grid-column: 1/4;
-		// 		position: relative;
-		// 	}
-		// 	.middle_section{
-		// 		min-height: 100vh;
-		// 		grid-column: 4/10;
-		// 		position: relative;
-		// 		z-index: 11;
-		// 		.screen_name_wrap{
-		// 			position: fixed;
-		// 			display: flex;
-		// 			flex-direction: row;
-		// 			top: 50%;
-		// 			transform: translateY(-50%);
-		// 			left: 7%;
-		// 			z-index: 200;
-		// 			font-size: 2rem;
-		// 			h1{
-		// 				text-transform: uppercase;
-		// 				font-weight: 900;
-		// 				line-height: 80px;
-		// 				font-size: 70px;
-		// 				&:nth-child(1){
-		// 					color: $pink;
-		// 				}
-		// 				&:nth-child(2){
-		// 					color: $white;
-		// 				}
-		// 			}
-		// 		}
-
-		// 	}
-		// 	.right_section{
-		// 		grid-column: 10/13;
-		// 		background-color: $lightGrey;
-		// 		background-attachment: fixed;
-		// 		min-height: 100vh;
-		// 		position: relative;
-		// 	}
-		// }
+		
 	}
 }
 
@@ -265,7 +212,6 @@ html{
 				}
 			}
 			.screen_name_wrap{
-				left: 20%;
 				div{
 					h1{
 						font-size: 26px;
