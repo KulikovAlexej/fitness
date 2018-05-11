@@ -100,16 +100,24 @@
 
 	/////////////////////////////////////////////
 
-	document.querySelectorAll('.question_wrap').forEach((btn, i) => {
-		btn.addEventListener('click', (event) => {
-			
-			let currentNode = event.target;
-			while (!currentNode.classList.contains('question_wrap')) {
-				currentNode = currentNode.parentNode;
-			}
-			let tab = new Tab(currentNode.nextElementSibling);
+	document.querySelectorAll('.container_tab').forEach((containerTab) => {
+
+		let headerPart = containerTab.firstElementChild;
+		let bodyPart = containerTab.lastElementChild;
+		let cross_stripe = headerPart.lastElementChild.lastElementChild;
+
+		let tab = new Tab(containerTab, headerPart, bodyPart, cross_stripe);
+
+
+		headerPart.addEventListener('click', (event) => {
 			tab.toggleContent();
 		})
+
+		bodyPart.addEventListener('transitionend', (event) => {
+			tab.finishedAnimation();
+		})
+
+
 	})
 
 	/////////////////////////////////////////// init popUp
