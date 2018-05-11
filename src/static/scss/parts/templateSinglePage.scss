@@ -1,0 +1,145 @@
+@import "../fonts";
+@import "../libs";
+@import "../vars";
+@import "../media-queries";
+
+html{
+	body{
+		.left_sidebar{
+			.pagin_wrap{
+				a{
+					color: $white;
+					transform: rotateZ(-90deg);
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 11px;
+					line-height: 15px;
+				}
+
+			}
+		}
+		.fixed_layout{
+			height: 100vh;
+			width: 100%;
+			background-color: $pink;
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			position: fixed;
+			.left_section{
+				height: 100vh;
+				background-color: $darkGrey;
+				background-attachment: fixed;
+				grid-column: 1/4;
+			}
+			.middle_section{
+				height: 100vh;
+				grid-column: 4/10;
+				background-repeat: no-repeat;
+				background-size: cover;
+
+			}
+			.right_section{
+				height: 100vh;
+				grid-column: 10/13;
+				background-color: $lightGrey;
+			}
+		}
+		.screen_name_wrap{
+			position: fixed;
+			display: flex;
+			flex-direction: row;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 7%;
+			z-index: 200;
+			font-size: 2rem;
+			h1{
+				text-transform: uppercase;
+				font-weight: 900;
+				line-height: 80px;
+				font-size: 70px;
+				&:nth-child(1){
+					color: $pink;
+				}
+				&:nth-child(2){
+					color: $white;
+				}
+			}
+		}
+
+		.content{
+			position: relative;
+			float: right;
+			margin-right: 10vw;
+		}
+
+		
+	}
+}
+
+// 768 - 1024
+
+@include mq($max-width: 1024px){
+
+}
+
+// 480 - 768
+
+@include mq($max-width: 768px){
+	html{
+		body{
+			.fixed_layout{
+				.left_section{
+					grid-column: 1/2;
+				}
+				.middle_section{
+					grid-column: 2/13;
+
+				}
+				.right_section{
+					display: none;
+				}
+			}
+			.screen_name_wrap{
+				position: absolute;
+				top: 25%;
+				left: 0%;
+				margin-left: 13vw;
+			}
+			.content{
+				margin-left: 13vw;
+				margin-right: 0;
+				width: 70vw;
+				float: left;
+			}
+		}
+	}
+}
+@include mq($max-width: 480px){
+	html{
+		body{
+			.fixed_layout{
+				.left_section{
+					display: none;
+				}
+				.middle_section{
+					grid-column: 1/13;
+				}
+				.right_section{
+					display: none;
+				}
+			}
+			.screen_name_wrap{
+				div{
+					h1{
+						font-size: 26px;
+						line-height: 30px;	
+					}
+				}
+			}
+			.content{
+				width: 80vw;
+			}
+		}
+	}
+}
