@@ -1,7 +1,7 @@
 (function(){
 
 	'use strict'
-	// Сделать колбэки на анимацию
+
 	class Tab {
 		constructor(containerTab, headerPart, bodyPart, cross_stripe){
 			this.tab = containerTab;
@@ -25,10 +25,7 @@
 			}
 			
 		}
-		// test(){
-		// 	this.animated = !this.animated;
-		// 	console.log(this.animated)
-		// }
+
 		finishedAnimation() {
 			this.animated = false;
 		}
