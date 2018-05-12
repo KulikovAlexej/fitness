@@ -1,0 +1,70 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "media-queries";
+
+@import 'parts/commonStyles';
+@import 'parts/aside';
+@import 'parts/templateSinglePage';
+
+html{
+	body{
+		.fixed_layout{		
+			.middle_section{
+				background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/04_main_page.jpg);
+				background-position-y: center;
+				background-position-x: center;
+			}
+		}
+		.content{
+			background-color: orange;
+			width: 400px;
+			height: 2000px;
+			margin-top: 100px;
+			.feedback_wrap.even{
+				display: grid;
+				grid-template-columns: 80% 20%;
+				background-color: pink;
+				.feedback_text_wrap{
+					grid-column: 1/2;
+					margin: 10px;
+					padding: 10px;
+					background-color: white;
+					position: relative;
+					border-radius: 21px;
+					p{
+						font-size: 12px;
+					}
+					.tail_wrap{
+						position: absolute;
+						bottom: -9px;
+						left: -7px;
+						width: 30px;
+						// background-color: blue;
+						img{
+							width: 100%;
+						}
+					}
+				}
+				.user_wrap{
+					grid-column: 2/3;
+					// padding: 10px;
+					background-color: yellow;
+					display: flex;
+					flex-direction: column;
+					.userpic_wrap{
+						width: 90%;
+						height: auto;
+						img{
+							width: 100%;
+						}
+					}
+					p{
+						color: red;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+}
