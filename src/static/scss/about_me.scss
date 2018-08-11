@@ -1,0 +1,80 @@
+@import "fonts";
+@import "libs";
+@import "vars";
+@import "media-queries";
+
+@import 'parts/commonStyles';
+@import 'parts/aside';
+@import 'parts/templateSinglePage';
+
+html{
+	body{
+		.fixed_layout{		
+			.middle_section{
+				background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/04_main_page.jpg);
+				background-position-y: center;
+				background-position-x: center;
+			}
+		}
+		.content{
+			$size: 400px;
+			width: $size;
+			margin-top: 100px;
+		}
+	}
+}
+@include mq($max-width: 768px){
+	html{
+		body{
+			.fixed_layout{
+				.left_section{
+
+				}
+				.middle_section{
+
+
+				}
+				.right_section{
+
+				}
+			}
+			.screen_name_wrap{
+
+			}
+			.content{
+				$size: 70vw;
+				margin-top: 40vh;
+				width: 70vw;
+				float: left;
+			}
+		}
+	}
+}
+
+@include mq($max-width: 480px){
+	html{
+		body{
+			.fixed_layout{
+				.left_section{
+
+				}
+				.middle_section{
+
+
+				}
+				.right_section{
+
+				}
+			}
+			.screen_name_wrap{
+
+			}
+			.content{
+				$size: 70vw;
+				margin-top: 40vh;
+				width: 85vw;
+				float: left;
+			}
+		}
+	}
+}
