@@ -21,8 +21,16 @@ html{
 			width: $size;
 			margin-top: 100px;
 			.info_block{
+				color: $white;
+				h3{
+					// font-family: "Apple Color Emoji";
+					font-size: 30px;
+					line-height: 39px;
+				}
 				p{
-					
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 23px;
 				}
 				.img_wrap{
 					width: 100%;
@@ -74,7 +82,7 @@ html{
 						.counter_slides{
 							height: 17px;
 							span{
-								color: $darkGrey;
+								// color: $darkGrey;
 								// color: red;
 								display: block;
 								transition: all .2s linear;

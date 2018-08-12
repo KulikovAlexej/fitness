@@ -10,6 +10,8 @@ const dataSliderTwo = {
 	next: document.querySelectorAll('.wards_onright')[1]
 }
 
+
+
 let sliderOne = new WardsSlider(dataSliderOne.container, dataSliderOne.counter);
 let sliderTwo = new WardsSlider(dataSliderTwo.container, dataSliderTwo.counter);
 
