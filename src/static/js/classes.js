@@ -2,6 +2,39 @@
 
 	'use strict'
 
+
+
+	class Hamburger {
+		constructor(navToggle, popUp){
+			this.navToggle = navToggle;
+			this.popUp = popUp;
+		}
+
+		doToggle(e) {
+	    	e.preventDefault();
+	    	this.navToggle.classList.toggle('expanded');
+	    	// console.log(this.navToggle)
+	    	if(this.navToggle.classList.contains('expanded')){
+	    		console.log('открыт - закрываю')
+	    		this.popUp.makeVisible();
+	    	} else {
+	    		console.log('закрыт - открываю')
+	    		
+	    		this.popUp.makeHidden();
+	    	}
+	      // this.nav.classList.toggle('expanded');
+	  	}
+
+		
+	}
+
+	window.Hamburger = Hamburger;
+
+})();
+(function(){
+
+	'use strict'
+
 	class ModalObserver {
 		constructor (startActivity) {
 			this.activeModal = startActivity;
@@ -107,8 +140,6 @@
 	class PopUp {
 		constructor(popUpObject, modalObserver){
 			this.popUp = popUpObject.popUp;
-			this.closeBtn = popUpObject.closeBtn;
-			this.openBtn = popUpObject.openBtn;
 			this.activated = false;
 			this.modalObserver = modalObserver;
 		}
@@ -124,18 +155,7 @@
 		}
 
 		init () {
-			this.openBtn.addEventListener('click', (event) => {
-				if(this.modalObserver.activeModal == false){
-					this.makeVisible();
-					// console.log(modal_observer.activeModal);
-				}
-			})
-			this.closeBtn.addEventListener('click', ( event ) => {
-				if( this.modalObserver.activeModal == true ) {
-					this.makeHidden();
-					// console.log( modal_observer.activeModal );
-				}
-			})
+
 		}
 	}
 

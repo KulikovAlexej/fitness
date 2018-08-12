@@ -122,6 +122,8 @@
 
 	/////////////////////////////////////////// init popUp
 
+	// debugger;
+
 	let modal_observer = new ModalObserver(false);
 	let youtubeObject = {
 		popUp: document.querySelector('.modal_window.youtube'),
@@ -130,13 +132,33 @@
 	}
 	let menuPopUpObj = {
 		popUp: document.querySelector('.modal_window.menu'),
-		closeBtn: document.querySelector('.modal_window.menu .close_wrap'),
-		openBtn: document.querySelector('.hamburger_wrap')
+		closeBtn: document.querySelector('.nav-toggle'),
+		openBtn: document.querySelector('.nav-toggle')
 	}
 
-	let youtubePopUp = new PopUp(youtubeObject, modal_observer);
+	// let youtubePopUp = new PopUp(youtubeObject, modal_observer);
 	let menuPopUp = new PopUp(menuPopUpObj, modal_observer);
-	youtubePopUp.init();
+	// youtubePopUp.init();
 	menuPopUp.init();
+	// menuPopUp.makeVisible();
+
+	///////////////////
+	const hamburger = new Hamburger(document.querySelector('.nav-toggle'), menuPopUp);
+
+	document.querySelector('.nav-toggle').addEventListener('click', (e) => {
+		hamburger.doToggle(e)
+	})
+
+
 
 })();
+
+
+// (function() {
+
+
+
+//   hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+//   // hamburger.nav.addEventListener('click', function(e) { hamburger.doToggle(e); });
+
+// }());
