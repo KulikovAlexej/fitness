@@ -20,6 +20,78 @@ html{
 			$size: 400px;
 			width: $size;
 			margin-top: 100px;
+			.info_block{
+				color: $white;
+				h3{
+					// font-family: "Apple Color Emoji";
+					font-size: 30px;
+					line-height: 39px;
+				}
+				p{
+					font-size: 15px;
+					font-weight: bold;
+					line-height: 23px;
+				}
+				.img_wrap{
+					width: 100%;
+					position: relative;
+					img{
+						width: 100%;
+					}
+					.wards_onright{
+						position: absolute;
+						left: $size;
+						top: 160px;
+						transform: translateX(-50%);
+						width: 72px;
+						height: 62px;
+						background-color: $pink;
+						z-index: 300;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						cursor: pointer;
+						img{
+							width: 45%;
+						}
+
+					}
+					.slider_wrap{
+						width: $size;
+						overflow: hidden;
+						display: flex;
+						position: relative;
+						.slide{
+							transition: all .5s;
+							min-width: 100%;
+							width: 100%;
+							// background-color: green;
+							height: $size;
+							.img_wrap{
+								img{
+									width: 100%;
+								}
+							}
+
+						}
+					}
+					.pagin_wrap{
+						z-index: 300;
+						font-size: 12px;
+						display: flex;
+						.counter_slides{
+							height: 17px;
+							span{
+								// color: $darkGrey;
+								// color: red;
+								display: block;
+								transition: all .2s linear;
+							}
+						}
+
+					}
+				}
+			}
 		}
 	}
 }

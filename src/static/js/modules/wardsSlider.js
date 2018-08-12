@@ -10,6 +10,8 @@
 			super( slider_wrap );
 			this.slide_counter = slide_counter;
 			this.spanStripe = undefined;
+			this.currentSlideWrap = this.slide_counter.children[0];
+			this.amountSlideWrap = this.slide_counter.children[1];
 
 		}
 
@@ -22,9 +24,10 @@
 				this.slides.forEach(( slide ) => {
 					slide.style.transform = 'translateX(' + this.reqCssPos + '%)';
 				})
-				this.spanStripe.forEach((span) => {
-					span.style.transform = 'translateY(' + this.reqCssPos + '%)';
-				})
+
+				for(let i = 0; i < this.spanStripe.length; i++) {
+					this.spanStripe[i].style.transform = 'translateY(' + this.reqCssPos + '%)';
+				}
 
 			this.notAnimated = true;
 			}
@@ -39,13 +42,18 @@
 				this.reqCssPos = 0;
 				this.notAnimated = true;
 			})
-			this.spanStripe.forEach((span) => {
-				span.style.transform = 'translateY(0%)';
-			})
+
+			for(let i = 0; i < this.spanStripe.length; i++) {
+				this.spanStripe[i].style.transform = 'translateY(0%)';
+			}
 		}
 	
 		createPageCounter () {
-			document.querySelector('.pagin_wrap .amount_slides span').innerHTML = '/0' + this.amount_slides;
+
+			const amountSpan = document.createElement('span');
+			amountSpan.innerHTML = '/0' + this.amount_slides;
+
+			this.amountSlideWrap.appendChild(amountSpan);
 			let slideIndexes = [];
 			this.slides.forEach((slides, index) => {
 				slideIndexes.push(`0${index + 1}`)
@@ -54,11 +62,10 @@
 			slideIndexes.forEach((index) => {
 				let newSpan = document.createElement('span');
 				newSpan.innerHTML = index;
-				document.querySelector('.pagin_wrap .counter_slides').appendChild(newSpan);
+				this.currentSlideWrap.appendChild(newSpan);
 			})
 			this.spanStripe = document.querySelectorAll('.pagin_wrap .counter_slides span');
-			
-
+			this.spanStripe = this.currentSlideWrap.children;	
 		}
 	}
 
