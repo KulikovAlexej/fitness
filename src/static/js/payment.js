@@ -12,12 +12,16 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
-document.querySelector('.copy_btn').addEventListener('click', (e) => {
+const copyBtn = document.querySelector('.copy_btn');
+
+copyBtn.addEventListener('click', (e) => {
 	const spans = document.querySelector('.card_number_wrap').children;
 	let text = '';
 	for(let i = 0; i < spans.length; i++) {
 		text += spans[i].innerText;
 	}
-	copyToClipboard(text)
+	copyToClipboard(text);
+  copyBtn.children[0].innerText = "Скопировано";
+  console.log(copyBtn.innerHTML);
 
 })
