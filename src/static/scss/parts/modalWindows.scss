@@ -1,5 +1,6 @@
 @import "../vars";
 @import "../libs";
+@import "../media-queries";
 
 body{
 	.modal_window{
@@ -36,6 +37,7 @@ body{
 					background-image: url(../images/меню.jpg);
 					background-repeat: no-repeat;
 					background-position: right;
+					background-size: contain;
 					padding-top: 50px;
 					padding-left: 7%;
 					nav{
@@ -138,19 +140,79 @@ body{
 	}
 }
 
-@keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
+@include mq($max-width: 1024px) {
+	body{
+		.modal_window{
+			&.active{
+				.wrapper{
+					.left_side{
+						grid-column: 1/2;
+					}
+					.middle_side{
+						grid-column: 2/13;
+						background-size: cover;
+						padding-top: 250px;
+					}
+					.right_side{
+						display: none;
+					}
+				}
+			}
+		}		
+	}
 
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
 }
+
+@include mq($max-width: 480px) {
+	body {
+		.modal_window{
+			&.active.menu{
+				.wrapper{
+					.left_side{
+						display: none;
+					}
+					.middle_side{
+						grid-column: 1/13;
+						padding-top: 70px;
+						padding-left: 60px;
+						nav{
+							ul{
+								li{
+									margin: 17px 0;
+									a{
+										font-size: 22px;
+									}
+
+								}
+							}
+						}
+						.accent_page{
+							margin-top: 60px;
+						}
+						footer{
+							padding-right: 20px;
+							p{
+								font-size: 13px;
+							}
+						}
+					}
+					.right_side{
+						display: none;
+					}
+					.instagram_wrap{
+						.rotate_text{
+							margin-top: 50px;
+							margin-left: -20px;
+
+						}
+						.wrap_logo{
+							margin-top: 38px;
+							margin-left: 11px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

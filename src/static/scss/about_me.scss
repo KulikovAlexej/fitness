@@ -11,13 +11,13 @@ html{
 	body{
 		.fixed_layout{		
 			.middle_section{
-				background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/04_main_page.jpg);
+				background-image: linear-gradient(rgba(42, 48, 62, 0.07)), url(../images/ab_main_ph_01.jpg);
 				background-position-y: center;
 				background-position-x: center;
 			}
 		}
 		.content{
-			$size: 400px;
+			$size: 550px;
 			width: $size;
 			margin-top: 100px;
 			.info_block{
@@ -28,11 +28,27 @@ html{
 					line-height: 39px;
 				}
 				p{
-					font-size: 15px;
-					font-weight: bold;
-					line-height: 23px;
+					// font-size: 15px;
+					// font-weight: bold;
+					// line-height: 23px;
+					font-family: "Open Sans";
+					font-size: 18px;
+					font-weight: 800;
+					line-height: 25px;
+					margin-top: 12px;
+					margin-bottom: 12px;
+					a{
+						color: $white;
+						text-decoration: none;
+						border-bottom: 4px solid $pink;
+						&:hover{
+							color: $pink;
+						}
+					}
 				}
 				.img_wrap{
+					margin-top: 7px;
+					margin-bottom: 40px;
 					width: 100%;
 					position: relative;
 					img{
@@ -40,7 +56,7 @@ html{
 					}
 					.wards_onright{
 						position: absolute;
-						left: $size;
+						left: 400px;
 						top: 160px;
 						transform: translateX(-50%);
 						width: 72px;
@@ -57,7 +73,7 @@ html{
 
 					}
 					.slider_wrap{
-						width: $size;
+						width: 400px;
 						overflow: hidden;
 						display: flex;
 						position: relative;
@@ -66,7 +82,10 @@ html{
 							min-width: 100%;
 							width: 100%;
 							// background-color: green;
-							height: $size;
+							height: 400px;
+							&.long{
+								height: 600px;
+							}
 							.img_wrap{
 								img{
 									width: 100%;
@@ -146,6 +165,29 @@ html{
 				margin-top: 40vh;
 				width: 85vw;
 				float: left;
+				.info_block{
+					h3{
+						font-size: 6vw;
+					}
+					.img_wrap{
+						.wards_onright{
+							left: $size;
+							top: 110px;
+							width: 56px;
+							height: 48px;
+						}
+						.slider_wrap{
+							width: $size;
+							.slide{
+								height: $size;
+								&.long{
+									height: $size * 1.6;
+								}
+							}
+						}
+					}
+					
+				}
 			}
 		}
 	}

@@ -8,16 +8,47 @@ html(lang='ru=RU')
 		link(rel='icon', href='static/images/icons/favicon.ico', type='image/x-icon')
 		link(rel='stylesheet', href='static/css/wards.css')
 	body
+		.modal_window.menu
+			.wrapper
+				.instagram_wrap
+					.rotate_text
+						a(href='https://www.instagram.com/ritochkkka/') ritochkkka
+					.wrap_logo
+						img(src='static/images/icons/inst_ico.png')
+				.left_side
+				.middle_side
+					nav
+						ul.ordinary_page
+							li
+								a(href='./aboutMe.html') Обо мне
+							li
+								a(href='./wards.html') Мои подопечные
+							li
+								a(href='./questions.html') Вопрос - ответ
+							//- li
+							//- 	a(href='https://learn.javascript.ru/metrics') Контакты
+							//- сделать  якоря или что-то такое
+						ul.accent_page
+							li
+								a(href='static/images/Анкета.png', download) Анкета
+							li
+								a(href='./payment.html') Оплата курса
+					footer
+						p ❤Спасибо за дизайн и разработку <a href='https://vk.com/id133644533'>Дарье Куликовой</a> и <a href='https://vk.com/id267295185'>Лёше Куликову</a> 
+
+				.right_side
+		.nav-toggle
+			.nav-toggle-bar
 		aside.left_sidebar
 			.instagram_wrap
 				.rotate_text
-					a(href='#') ritochkkka
+					a(href='https://www.instagram.com/ritochkkka/') ritochkkka
 				.wrap_logo
 					img(src='static/images/icons/inst_ico.png')
 			.pagin_wrap
 				a(href='/') назад
 			.next_chapter_wrap
-				.rotate_text СЛЕДУЮЩИЙ
+				.rotate_text SCROLL
 				#stripe
 		
 		.fixed_layout  

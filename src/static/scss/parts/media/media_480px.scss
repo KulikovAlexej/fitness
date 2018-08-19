@@ -6,54 +6,7 @@
 @include mq($max-width: 480px){
 	html{
 		body{
-			.modal_window{
-				&.active.menu{
-					.wrapper{
-						.left_side{
-							display: none;
-						}
-						.middle_side{
-							grid-column: 1/13;
-							padding-top: 70px;
-							padding-left: 60px;
-							nav{
-								ul{
-									li{
-										margin: 17px 0;
-										a{
-											font-size: 22px;
-										}
-										
-									}
-								}
-							}
-							.accent_page{
-								margin-top: 60px;
-							}
-							footer{
-								padding-right: 20px;
-								p{
-									font-size: 13px;
-								}
-							}
-						}
-						.right_side{
-							display: none;
-						}
-						.instagram_wrap{
-							.rotate_text{
-								margin-top: 50px;
-								margin-left: -20px;
-
-							}
-							.wrap_logo{
-								margin-top: 38px;
-								margin-left: 11px;
-							}
-						}
-					}
-				}
-			}
+			
 			.left_sidebar{
 				
 				.instagram_wrap{

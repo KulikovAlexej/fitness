@@ -8,16 +8,47 @@ html(lang='ru=RU')
 		link(rel='icon', href='static/images/icons/favicon.ico', type='image/x-icon')
 		link(rel='stylesheet', href='static/css/about_me.css')
 	body
+		.modal_window.menu
+			.wrapper
+				.instagram_wrap
+					.rotate_text
+						a(href='https://www.instagram.com/ritochkkka/') ritochkkka
+					.wrap_logo
+						img(src='static/images/icons/inst_ico.png')
+				.left_side
+				.middle_side
+					nav
+						ul.ordinary_page
+							li
+								a(href='./aboutMe.html') Обо мне
+							li
+								a(href='./wards.html') Мои подопечные
+							li
+								a(href='./questions.html') Вопрос - ответ
+							//- li
+							//- 	a(href='https://learn.javascript.ru/metrics') Контакты
+							//- сделать  якоря или что-то такое
+						ul.accent_page
+							li
+								a(href='static/images/Анкета.png', download) Анкета
+							li
+								a(href='./payment.html') Оплата курса
+					footer
+						p ❤Спасибо за дизайн и разработку <a href='https://vk.com/id133644533'>Дарье Куликовой</a> и <a href='https://vk.com/id267295185'>Лёше Куликову</a> 
+
+				.right_side
+		.nav-toggle
+			.nav-toggle-bar
 		aside.left_sidebar
 			.instagram_wrap
 				.rotate_text
-					a(href='#') ritochkkka
+					a(href='https://www.instagram.com/ritochkkka/') ritochkkka
 				.wrap_logo
 					img(src='static/images/icons/inst_ico.png')
 			.pagin_wrap
 				a(href='/') назад
 			.next_chapter_wrap
-				.rotate_text СЛЕДУЮЩИЙ
+				.rotate_text SCROLL
 				#stripe
 		
 		.fixed_layout  
@@ -32,45 +63,53 @@ html(lang='ru=RU')
 			.info_block
 				p Привет! Меня зовут Маргарита) Я фитнес-тренер. У меня среднее медициское образовние, и сейчас получаю высшее.
 				.img_wrap
-					img(src='static/images/06_main_page.jpg')
+					img(src='static/images/about_ph_2.jpg')
 			.info_block
-				h3 Я люблю спорт
-				p Привет! Меня зовут Маргарита) Я фитнес-тренер. У меня среднее медициское образовние, и сейчас получаю высшее.
+				h3 Я очень люблю спорт
+				p С детства я в спорте, занимаюсь легкой атлетикой и другими видами спорта,особенно люблю волейбол. Имею 2 разряд и звание судьи.В тренажерный заля пришла чтобы исправить здоровье. После первых занятий я поняла, что это точно моё.
 				.img_wrap
 					.wards_onright
 						img(src='static/images/icons/arrow_ward.svg')
 					.slider_wrap.clearfix
 						.slide
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_1.jpg')
+								img(src='./static/images/я люблю спорт/I_love_01.jpg')
 						.slide
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_2.jpg')
+								img(src='./static/images/я люблю спорт/I_love_02.jpg')
 						.slide
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_3.jpg')
+								img(src='./static/images/я люблю спорт/I_love_03.jpg')
+						.slide
+							.img_wrap
+								img(src='./static/images/я люблю спорт/I_love_04.jpg')
 					.pagin_wrap.wards
 						.counter_slides.trim
 						.amount_slides
 			.info_block
-				h3 #занимайтесь_тем_чем<br>_хотите_а_не_тем_чем<br>_приходится😋💪
+				h3 #занимайтесь_тем_чем<br>_хотите_а_не_тем_чем<br>_приходится
 				p Мой характер а так же способность помогать людям со мной с детства, поэтому я будущий стоматолог и фитнесс-тренер.
 				.img_wrap
 					.wards_onright
 						img(src='static/images/icons/arrow_ward.svg')
 					.slider_wrap.clearfix
-						.slide
+						.slide.long
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_1.jpg')
-						.slide
+								img(src='./static/images/занимайся тем, чем хочешь/zan_01.jpg')
+						.slide.long
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_2.jpg')
-						.slide
+								img(src='./static/images/занимайся тем, чем хочешь/zan_02.jpg')
+						.slide.long
 							.img_wrap
-								img(src='./static/images/wards/ph_pod_3.jpg')
+								img(src='./static/images/занимайся тем, чем хочешь/zan_03.jpg')
+						.slide.long
+							.img_wrap
+								img(src='./static/images/занимайся тем, чем хочешь/zan_04.jpg')
 					.pagin_wrap.wards
 						.counter_slides.trim
 						.amount_slides
+				p Следи за мной в 
+					a(href='https://www.instagram.com/ritochkkka/') instagram
 
 			
 		script(src='static/js/classes.js')
